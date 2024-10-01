@@ -25,7 +25,7 @@ use App\Http\Controllers\RatingController;
 |
 */
 
-Route::get('/blog', [BlogController::class, 'blog_page'])->name('blog.page');
+Route::get('/', [BlogController::class, 'blog_page'])->name('home');
 Route::get('/blog/{url}', [BlogController::class, 'blog_details'])->name('blog.details.page');
 
 Route::get('/faq/{brand}', [BrandFaqController::class, 'brand_faq_page'])->name('brand.faq.page');
@@ -48,5 +48,4 @@ Route::middleware(['admin'])->group(function () {
     Route::get('admin/add-blog-category', [BlogController::class, 'add_blog_category'])->name('adm.add.blog.category');
     Route::put('admin/add-blog-category', [BlogController::class, 'add_blog_category_submit'])->name('adm.add.blog.category.submit');
     Route::delete('admin/delete-blog-category/{id}', [BlogController::class, 'delete_blog_category'])->name('adm.del.blog.category');
-
 });

@@ -31,8 +31,13 @@
 </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
-<script src="https://cdn.tiny.cloud/1/g4t84idbnpvcy64863q42xws2s9jaeqh8m9g7lpjteh264zd/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.summernote').summernote();
+    });
+</script>
+{{-- <script src="https://cdn.tiny.cloud/1/wln99aphd9dj5ezcjd4mvkjigya9c3sig5fsue36w8h0avvw/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
     tinymce.init({
         selector: '.summernote',
@@ -47,7 +52,7 @@
                 title: 'Email'
             },
         ],
-        apiKey: 'g4t84idbnpvcy64863q42xws2s9jaeqh8m9g7lpjteh264zd',
+        apiKey: 'wln99aphd9dj5ezcjd4mvkjigya9c3sig5fsue36w8h0avvw',
         ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
     });
 
@@ -83,7 +88,7 @@
             $(this).closest('.faq-item').remove(); // Removes the closest parent '.faq-item' div
         });
     });
-</script>
+</script> --}}
 </body>
 
 </html>
